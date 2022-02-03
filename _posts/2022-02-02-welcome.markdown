@@ -1,0 +1,8 @@
+---
+layout: single
+title: 'Welcome'
+date: 2022-02-02 15:45:15 +0530
+categories: about
+---
+
+Welcome, I have moved my personal website from static web page to Jekyll. Hope to see you around.
