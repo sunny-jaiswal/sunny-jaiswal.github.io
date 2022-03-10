@@ -41,7 +41,7 @@ Linux is great, however there are few times when one has to use Windows only. Fo
 12. On the Windows VM, go to URL https://webcammictest.com/ to test mic and camera
 13. To detach the webcam from guest OS, execute the following command:
 
-        vboxmanage controlvm windows10 webcam detach
+        vboxmanage controlvm <vm_name> webcam detach
 
 
 References:
