@@ -5,20 +5,26 @@ date: 2022-11-16 16:00:00 +0530
 categories: tutorial
 ---
 
+##### Problem
+
 Few months ago I updated my Linux Mint system to Linux Mint 21 which uses Ubuntu 22.04 codebase. Recently I tried to run my Jekyll based personal website but I got stuck. The issue is that Github Pages requires Jekyll 3.9 (latest one is 4.3.1), Jekyll 3.9 requires Ruby 2.7 (latest version is 3.1.2) and Ruby 2.7 requires OpenSSL 1.1 (latest version is 3.0.0).
 
 Ubuntu 22 (Linux Mint 21) does not support OpenSSL 1.1 anymore, so one needs to compile the older OpenSSL and install the older versions of Ruby and Jekyll. There are two solutions:
-##### First Solution:
+
+##### First Solution
+
 We can try using this simpler solution first, we keep using Ruby 3 but use older version of bundler and add the missing gems. The following are the steps:
 
         sudo apt install build-essential ruby-full
         sudo gem install bundler:2.3.6
+        cd <project-dir>
         bundle add webrick
         bundle install
         bundle update
         bundle exec jekyll serve
 
-##### Second Solution:
+##### Second Solution
+
 If the first solution does not work, then we can just use older versions of all required softwares. The following are the steps:
 
 1. We need to first install OpenSSL 1.1, for this I followed steps mentioned [here](https://deanpcmad.com/2022/installing-older-ruby-versions-on-ubuntu-22-04/), with some customization
